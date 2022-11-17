@@ -30,19 +30,33 @@ class ViewController: UIViewController {
     super.viewDidLoad()
     updateUI()
   }
-
+  
   //MARK: Actions
   
   @IBAction func answerButtonTapped(_ sender: UIButton) {
-    questionNumber += 1
+    let userAnswer = sender.currentTitle!
+    let actualAnswer = quiz[questionNumber][1]
+    if userAnswer == actualAnswer {
+      print("It was true")
+    } else {
+      print("it was false")
+    }
+    
+    if questionNumber + 1 < quiz.count {
+      questionNumber += 1
+    } else {
+      questionNumber = 0
+    }
+    
     updateUI()
+    
   }
   
   //MARK: Functions
   
   func updateUI() {
     //quiz[0], quiz[1], quiz[2] for this we create questionNumber
-    questionLabel.text = quiz[questionNumber]
+    questionLabel.text = quiz[questionNumber][0]
   }
   
 }
