@@ -19,9 +19,9 @@ class ViewController: UIViewController {
   //MARK: Properties
   
   let quiz = [
-    "For + Two is equal to Six",
-    "Five - Three is greater than One",
-    "Three + Eight is less than Ten"
+    ["For + Two is equal to Six True", "True"],
+    ["Five - Three is greater than One", "True"],
+    ["Three + Eight is less than Ten", "False"]
   ]
   //Tracking question number. It's mean we check which currenty question now user reading
   var questionNumber = 0
@@ -41,7 +41,7 @@ class ViewController: UIViewController {
   //MARK: Functions
   
   func updateUI() {
-    //[questionNumber] inside array quiz
+    //quiz[0], quiz[1], quiz[2] for this we create questionNumber
     questionLabel.text = quiz[questionNumber]
   }
   
