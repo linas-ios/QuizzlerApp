@@ -25,13 +25,13 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WwA-nV-0yP">
-                                        <rect key="frame" x="0.0" y="86.666666666666657" width="363" height="467.33333333333337"/>
+                                        <rect key="frame" x="0.0" y="86.666666666666657" width="363" height="482.33333333333337"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sSx-gI-hhC">
-                                        <rect key="frame" x="0.0" y="569" width="363" height="70"/>
+                                        <rect key="frame" x="0.0" y="584" width="363" height="70"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="70" id="mn0-7c-BKw"/>
                                         </constraints>
@@ -44,7 +44,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Kr-XS-66g">
-                                        <rect key="frame" x="0.0" y="654" width="363" height="70"/>
+                                        <rect key="frame" x="0.0" y="669" width="363" height="70"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="70" id="ke3-Zx-nZ3"/>
                                         </constraints>
@@ -57,11 +57,11 @@
                                         </connections>
                                     </button>
                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="gUd-rm-Ebi">
-                                        <rect key="frame" x="0.0" y="739" width="363" height="20"/>
+                                        <rect key="frame" x="0.0" y="754" width="363" height="5"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" red="0.83921568629999999" green="0.39607843139999999" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="20" id="hz7-dD-mMK"/>
+                                            <constraint firstAttribute="height" constant="5" id="hz7-dD-mMK"/>
                                         </constraints>
                                     </progressView>
                                 </subviews>
