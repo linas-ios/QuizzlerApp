@@ -14,6 +14,7 @@
 		B004E5802926E151008989CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B004E57F2926E151008989CC /* Assets.xcassets */; };
 		B004E5832926E151008989CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B004E5812926E151008989CC /* LaunchScreen.storyboard */; };
 		B004E58B2926E1F4008989CC /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B004E58A2926E1F4008989CC /* README.md */; };
+		B0A4FB16292912EC00CE162E /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A4FB15292912EC00CE162E /* Question.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		B004E5822926E151008989CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B004E5842926E151008989CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B004E58A2926E1F4008989CC /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		B0A4FB15292912EC00CE162E /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				B004E5762926E150008989CC /* AppDelegate.swift */,
 				B004E5782926E150008989CC /* SceneDelegate.swift */,
 				B004E57A2926E150008989CC /* ViewController.swift */,
+				B0A4FB15292912EC00CE162E /* Question.swift */,
 				B004E57C2926E150008989CC /* Main.storyboard */,
 				B004E57F2926E151008989CC /* Assets.xcassets */,
 				B004E5812926E151008989CC /* LaunchScreen.storyboard */,
@@ -143,6 +146,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B004E57B2926E150008989CC /* ViewController.swift in Sources */,
+				B0A4FB16292912EC00CE162E /* Question.swift in Sources */,
 				B004E5772926E150008989CC /* AppDelegate.swift in Sources */,
 				B004E5792926E150008989CC /* SceneDelegate.swift in Sources */,
 			);
