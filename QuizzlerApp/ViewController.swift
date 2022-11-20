@@ -15,6 +15,7 @@ class ViewController: UIViewController {
   @IBOutlet weak var questionLabel: UILabel!
   @IBOutlet weak var trueUIButton: UIButton!
   @IBOutlet weak var falseUIButton: UIButton!
+  @IBOutlet weak var progressBar: UIProgressView!
   
   //MARK: Properties
   
@@ -47,9 +48,9 @@ class ViewController: UIViewController {
     let userAnswer = sender.currentTitle!
     let actualAnswer = quiz[questionNumber].answer
     if userAnswer == actualAnswer {
-      print("It was true")
+      sender.backgroundColor = .green
     } else {
-      print("it was false")
+      sender.backgroundColor = .red
     }
     
     if questionNumber + 1 < quiz.count {
@@ -58,15 +59,18 @@ class ViewController: UIViewController {
       questionNumber = 0
     }
     
-    updateUI()
+    Timer.scheduledTimer(timeInterval: 0.3, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
     
   }
   
   //MARK: Functions
-  
-  func updateUI() {
+ @objc func updateUI() {
     //quiz[0], quiz[1], quiz[2] for this we create questionNumber
     questionLabel.text = quiz[questionNumber].text
+   trueUIButton.backgroundColor = .clear
+   falseUIButton.backgroundColor = .clear
+   progressBar.progress = Float(questionNumber + 1) / Float(quiz.count)
+    
   }
   
 }

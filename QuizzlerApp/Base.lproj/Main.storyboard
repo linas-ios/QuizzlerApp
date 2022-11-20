@@ -56,7 +56,7 @@
                                             <action selector="answerButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="chz-MF-hcb"/>
                                         </connections>
                                     </button>
-                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="gUd-rm-Ebi">
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gUd-rm-Ebi">
                                         <rect key="frame" x="0.0" y="754" width="363" height="5"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" red="0.83921568629999999" green="0.39607843139999999" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -83,6 +83,7 @@
                     </view>
                     <connections>
                         <outlet property="falseUIButton" destination="0Kr-XS-66g" id="6kX-Fw-Xmj"/>
+                        <outlet property="progressBar" destination="gUd-rm-Ebi" id="c13-wT-aFe"/>
                         <outlet property="questionLabel" destination="WwA-nV-0yP" id="VYe-N8-EOi"/>
                         <outlet property="scoreLabel" destination="uqe-c1-uBK" id="jrQ-DY-gE2"/>
                         <outlet property="trueUIButton" destination="sSx-gI-hhC" id="ICS-Gz-Z3U"/>
