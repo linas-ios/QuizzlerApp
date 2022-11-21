@@ -49,12 +49,7 @@ class ViewController: UIViewController {
       sender.backgroundColor = .red
     }
     
-    //Quiz progression logic
-    if questionNumber + 1 < quiz.count {
-      questionNumber += 1
-    } else {
-      questionNumber = 0
-    }
+    quizBrain.nextQuestion()
     
     //Add Timer for delay, because without timer delay, we not see colors (green, red)
     Timer.scheduledTimer(timeInterval: 0.3, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
@@ -67,14 +62,14 @@ class ViewController: UIViewController {
  @objc func updateUI() {
    
     //quiz[0], quiz[1], quiz[2] for this we create questionNumber
-   questionLabel.text = quiz[questionNumber].text
+   questionLabel.text = quizBrain.getQuestionText()
    
    //set background color for buttons clear
    trueUIButton.backgroundColor = .clear
    falseUIButton.backgroundColor = .clear
    
    //add progressBar for follow progress
-   progressBar.progress = Float(questionNumber + 1) / Float(quiz.count)
+   progressBar.progress = quizBrain.getProgress()
     
   }
   
