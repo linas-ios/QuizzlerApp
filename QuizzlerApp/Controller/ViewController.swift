@@ -68,6 +68,9 @@ class ViewController: UIViewController {
    trueUIButton.backgroundColor = .clear
    falseUIButton.backgroundColor = .clear
    
+  //add score if correct answer, if not then not add score
+   scoreLabel.text = "Score: \(quizBrain.getScore())"
+   
    //add progressBar for follow progress
    progressBar.progress = quizBrain.getProgress()
     

@@ -26,9 +26,13 @@ struct QuizBrain {
   //Tracking question number. It's mean we check which currenty question now user reading
   var questionNumber = 0
   
+  //Tracking user score
+  var score = 0
+  
   //QuizBrain Methods:
-  func checkAnswer(userAnswer: String) -> Bool {
+  mutating func checkAnswer(userAnswer: String) -> Bool {
     if userAnswer == quiz[questionNumber].answer {
+      score += 1
       return true
     } else {
       return false
@@ -36,20 +40,28 @@ struct QuizBrain {
   }
   
   func getQuestionText() -> String {
+    //return from quiz array which now question
     return quiz[questionNumber].text
   }
   
   func getProgress() -> Float {
+    //get progress float points for progress bar
     let progress = Float(questionNumber + 1) / Float(quiz.count)
     return progress
   }
   
-  //Quiz progression logic
+  //Quiz progression logic for next question and it's goint til the end questions from quiz array
+  //mutating - you destroy the old copy and create a new copy encompasses(kuri) the change
   mutating func nextQuestion() {
     if questionNumber + 1 < quiz.count {
       questionNumber += 1
     } else {
+      score = 0
       questionNumber = 0
     }
+  }
+  //return score from variable score
+  mutating func getScore() -> Int {
+    return score
   }
 }
