@@ -16,9 +16,10 @@ class ViewController: UIViewController {
   
   @IBOutlet weak var scoreLabel: UILabel!
   @IBOutlet weak var questionLabel: UILabel!
-  @IBOutlet weak var trueUIButton: UIButton!
-  @IBOutlet weak var falseUIButton: UIButton!
+  @IBOutlet weak var choiceTwo: UIButton!
+  @IBOutlet weak var choiceThree: UIButton!
   @IBOutlet weak var progressBar: UIProgressView!
+  @IBOutlet weak var choiceOne: UIButton!
   
   //MARK: Instance of our QuizBrain
   var quizBrain = QuizBrain()
@@ -64,9 +65,17 @@ class ViewController: UIViewController {
     //quiz[0], quiz[1], quiz[2] for this we create questionNumber
    questionLabel.text = quizBrain.getQuestionText()
    
+
+   
    //set background color for buttons clear
-   trueUIButton.backgroundColor = .clear
-   falseUIButton.backgroundColor = .clear
+   choiceTwo.backgroundColor = .clear
+   choiceThree.backgroundColor = .clear
+   choiceOne.backgroundColor = .clear
+   //
+   let questionAnswers = quizBrain.getAnswer()
+   choiceOne.setTitle(questionAnswers[0], for: .normal)
+   choiceTwo.setTitle(questionAnswers[1], for: .normal)
+   choiceThree.setTitle(questionAnswers[2], for: .normal)
    
   //add score if correct answer, if not then not add score
    scoreLabel.text = "Score: \(quizBrain.getScore())"
