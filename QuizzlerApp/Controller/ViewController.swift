@@ -77,7 +77,7 @@ class ViewController: UIViewController {
    choiceTwo.setTitle(questionAnswers[1], for: .normal)
    choiceThree.setTitle(questionAnswers[2], for: .normal)
    
-  //add score if correct answer, if not then not add score
+  //show score from method getScore and show in score label
    scoreLabel.text = "Score: \(quizBrain.getScore())"
    
    //add progressBar for follow progress
